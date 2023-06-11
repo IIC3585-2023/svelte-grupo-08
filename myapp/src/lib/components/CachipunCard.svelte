@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from "svelte";
-    import FireIcon from '../images/fire.png'
-    import WaterIcon from '../images/water.png'
-    import GrassIcon from '../images/grass.png'
+    import FireIcon from '../images/types/fire.png'
+    import WaterIcon from '../images/types/water.png'
+    import GrassIcon from '../images/types/grass.png'
 
     export let type;
     let number;
