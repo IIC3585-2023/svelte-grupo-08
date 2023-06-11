@@ -2,6 +2,8 @@
 	import '../../styles.css';
 	import { onMount } from "svelte";
 	import Card from '../../../lib/components/ShinyCard.svelte'
+	
+	import {shinyScore} from '../../store';
 
 	let pokemon;
 	let shiny;
@@ -15,6 +17,10 @@
 		}
 
 		if (shiny == number) {
+			shinyScore.update(o => {
+      			o.n++;
+      			return o;
+    		});
 			winner = true
 		} else {
 			loser = true

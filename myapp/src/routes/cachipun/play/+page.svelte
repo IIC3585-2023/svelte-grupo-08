@@ -2,6 +2,7 @@
 	import '../../styles.css';
     import Card from '../../../lib/components/CachipunCard.svelte'
 	import CachipunCard from '../../../lib/components/CachipunCard.svelte';
+    import {cachipunScore} from '../../store';
 
     let playing = true;
 
@@ -22,11 +23,19 @@
                 result = 'YOU LOSE'
             } else {
                 result = 'YOU WIN'
+                cachipunScore.update(o => {
+                    o.n++;
+                    return o;
+                });
             }
         } else if (oponent == 2) {
             oponent_type = 'fire'
             if (type == 'grass') {
                 result = 'YOU WIN'
+                cachipunScore.update(o => {
+                    o.n++;
+                    return o;
+                });
             } else if (type == 'fire') {
                 result = 'TIE'
             } else {
@@ -38,6 +47,10 @@
                 result = 'YOU LOSE'
             } else if (type == 'fire') {
                 result = 'YOU WIN'
+                cachipunScore.update(o => {
+                    o.n++;
+                    return o;
+                });
             } else {
                 result = 'TIE'
             }

@@ -20,6 +20,7 @@
 	import fairyIcon from '../../../lib/images/types/fairy.png'
 	import { onMount } from 'svelte';
 	import Card from '../../../lib/components/TypeCard.svelte';
+	import {typeScore} from '../../store';
 	
 	const types = [
 		{name: 'normal', icon: normalIcon},
@@ -57,6 +58,10 @@
 		playing = false;
 		if (type == winning_type) {
 			winner=true
+			typeScore.update(o => {
+      			o.n++;
+      			return o;
+    		});
 			console.log("WINNER")
 		} else {
 			loser=true
