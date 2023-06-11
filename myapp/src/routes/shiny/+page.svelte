@@ -1,13 +1,17 @@
 <script>
-	import './styles.css';
+	import '../styles.css';
+	import { onMount } from "svelte";
+
+	onMount(async () => {
+		console.log("HOLA")
+	})
 </script>
 
-<h1>PokeAPP</h1>
+<h1>Guess The Shiny</h1>
 <div class="app">
 	<main>
-		<a href='/shiny'><button type='button'> Shiny </button></a>
-		<a href='/type'><button type='button'> Type </button></a>
-		<a href='/cachipun'><button type='button'> Cachipun </button></a>
+		<a href='/shiny/play'><button type='button'> Play </button></a>
+		<a href='/shiny/about'><button type='button'> About </button></a>
 	</main>
 
 	<footer>

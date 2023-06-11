@@ -1,3 +1,13 @@
-1: cd myapp
-2: npm install (or pnpm install, etc) 
-3: npm run dev -- --open
+# Svelte APP Grupo 8
+
+## Como Correr
+```
+> cd myapp
+> npm install (or pnpm install, etc) (make sure you are using node version 16 or higher)
+> npm run dev -- --open
+```
+
+## Referencias
+```
+> Rueda:
+```

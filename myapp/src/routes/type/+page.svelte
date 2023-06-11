@@ -1,13 +1,14 @@
 <script>
-	import './styles.css';
+	import '../styles.css';
+	
 </script>
 
 <h1>PokeAPP</h1>
 <div class="app">
 	<main>
-		<a href='/shiny'><button type='button'> Shiny </button></a>
-		<a href='/type'><button type='button'> Type </button></a>
-		<a href='/cachipun'><button type='button'> Cachipun </button></a>
+		<a href='/shiny'><button type='button'> HOLA </button></a>
+		<a href='/type'><button type='button'> HOLA </button></a>
+		<a href='/cachipun'><button type='button'> HOLA </button></a>
 	</main>
 
 	<footer>
