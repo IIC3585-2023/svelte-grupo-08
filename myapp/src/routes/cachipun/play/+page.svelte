@@ -2,7 +2,7 @@
 	import '../../styles.css';
     import Card from '../../../lib/components/CachipunCard.svelte'
 	import CachipunCard from '../../../lib/components/CachipunCard.svelte';
-    import {cachipunScore} from '../../store';
+    import {cachipunScore, cachipunGames} from '../../store';
 
     let playing = true;
 
@@ -55,7 +55,12 @@
                 result = 'TIE'
             }
         }
-
+        if (result != 'TIE'){
+            cachipunGames.update(o => {
+      			o.n++;
+      			return o;
+    		});
+        }
         console.log("RESULT:", result)
 
     }

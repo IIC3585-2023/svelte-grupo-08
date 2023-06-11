@@ -3,7 +3,7 @@
 	import { onMount } from "svelte";
 	import Card from '../../../lib/components/ShinyCard.svelte'
 	
-	import {shinyScore} from '../../store';
+	import {shinyScore, shinyGames} from '../../store';
 
 	let pokemon;
 	let shiny;
@@ -25,6 +25,10 @@
 		} else {
 			loser = true
 		}
+		shinyGames.update(o => {
+      			o.n++;
+      			return o;
+    		});
 	}
 
 	onMount(async () => {
