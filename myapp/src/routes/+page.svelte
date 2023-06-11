@@ -41,6 +41,9 @@
 			<h1>Cachipun Score: {cachipunscore.n}</h1>
 			<h1>Shiny Win Ratio: {cachipunratio}</h1>
 		</div>
+		<div>
+			<a href='/favorite'><button type='button'> Favorite </button></a>
+		</div>
 	</main>
 
 	<footer>
