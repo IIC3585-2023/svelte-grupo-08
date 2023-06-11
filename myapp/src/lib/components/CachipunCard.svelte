@@ -1,16 +1,24 @@
 <script>
 	import { onMount } from "svelte";
+    import FireIcon from '../images/fire.png'
+    import WaterIcon from '../images/water.png'
+    import GrassIcon from '../images/grass.png'
+
     export let type;
     let number;
-    export let pokemon;
+    let pokemon;
+    let icon;
 
     onMount(() => {
         if (type == 'grass') {
-            number = 1
+            number = 1 
+            icon = GrassIcon;
         } else if (type == 'fire') {
             number = 4
+            icon = FireIcon;
         } else if (type == 'water') {
             number = 7
+            icon = WaterIcon;
         }
 
         fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
@@ -22,15 +30,15 @@
 
 </script>
 
-<div class='card'> 
+<div class='card' id={`${type}`}> 
     {#if pokemon}
         <img src={pokemon.sprites.front_default} alt='sprite'/>
+        <img src={icon} alt={`${type}`} width="100" />
     {/if}
 </div>
 
 <style>
     .card {
-        background-color: aliceblue;
         width: 10rem;
         height: 15rem;
         border-radius: 8px;
@@ -42,5 +50,17 @@
         vertical-align: text-top;
         text-align: center;
         margin: 24px;
+    }
+
+    #fire {
+        background-color: lightsalmon;
+    }
+
+    #water {
+        background-color: lightblue;
+    }
+
+    #grass {
+        background-color: lightgreen;
     }
 </style>
