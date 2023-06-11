@@ -27,10 +27,9 @@
 		fetch(`https://pokeapi.co/api/v2/pokemon/${number}`)
   		.then(response => response.json())
 		.then(data => {
-			console.log(data);
 			pokemon = data;
 
-  })
+  		})
 	})
 </script>
 
@@ -48,6 +47,11 @@
 			<div on:click={() => checkWin(1)}>
 				<Card pokemon={pokemon} shiny={shiny == 1}/>
 			</div>
+		</div>
+		{/if}
+		{#if !pokemon}
+		<div>
+			<h1> LOADING...</h1>
 		</div>
 		{/if}
 		{#if winner}

@@ -2,12 +2,12 @@
 	import '../styles.css';
 </script>
 
-<h1>PokeAPP</h1>
+<h1>Cachipun</h1>
 <div class="app">
 	<main>
-		<a href='/shiny'><button type='button'> HOLA </button></a>
-		<a href='/type'><button type='button'> HOLA </button></a>
-		<a href='/cachipun'><button type='button'> HOLA </button></a>
+		<a href='/cachipun/play'><button type='button'> Play </button></a>
+		<a href='/cachipun/about'><button type='button'> About </button></a>
+		<a href='/'><button type='button'> Home </button></a>
 	</main>
 
 	<footer>
