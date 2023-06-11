@@ -57,6 +57,8 @@
 		{/if}
 		{#if loser}
 		<h1> LOSER </h1>
+		<a href='/shiny'><button type='button'> Play Again </button></a>
+		<a href='/'><button type='button' > Home </button></a>
 		{/if}
 	</main>
 
