@@ -23,7 +23,6 @@
       			o.name = name;
       			return o;
     		});
-          //actualizar el nomvre del store
     }
 
 	onMount(async () => {
@@ -90,6 +89,13 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
+
+    input {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffcc03;
+        border-color: rgb(42, 117, 187);
+        border-width: 6px;
+    }
 
 	footer {
 		display: flex;
