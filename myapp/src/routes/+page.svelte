@@ -108,6 +108,7 @@
 		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
+		align-items: center;
 	}
 
 	footer {
@@ -128,7 +129,7 @@
 	}
 
 	.flexgrid {
-		display: grid;
+		margin-left: 10%;
 	}
 
 	.game-button {
