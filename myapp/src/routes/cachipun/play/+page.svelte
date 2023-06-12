@@ -94,7 +94,7 @@
 
                 <Card type={oponent_type} />
             </div>
-            <div class='result-footer'>
+            <div class='game'>
                 <a href='/cachipun'><button type='button'> Play Again </button></a>
                 <a href='/'><button type='button' > Home </button></a>
             </div>

@@ -21,6 +21,7 @@
           doYouHaveAFavorite=true;
           favoritePokemon.update(o => {
       			o.name = name;
+				o.url = pokemon.sprites.front_default;
       			return o;
     		});
     }

@@ -128,9 +128,10 @@
 				{#if loser}
 					<h1> YOU LOSE</h1>
 				{/if}
-
-				<a href='/type'><button type='button'> Play Again </button></a>
-				<a href='/'><button type='button' > Home </button></a>
+				<div class="game" >
+					<a href='/type'><button type='button'> Play Again </button></a>
+					<a href='/'><button type='button' > Home </button></a>
+				</div>
 			{/if}
 
 		</div>

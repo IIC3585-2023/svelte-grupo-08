@@ -4,7 +4,7 @@
 </script>
 <h1>Guess The Type</h1>
 <div class="app">
-	<main>
+	<main style="align-items:center">
 		<a href='/type/play'><button type='button'> Play </button></a>
 		<a href='/type/about'><button type='button'> About </button></a>
 		<a href='/'><button type='button'> Home </button></a>

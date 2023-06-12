@@ -1,7 +1,8 @@
 <script>
 	import './styles.css';
-	import {shinyScore, cachipunScore, typeScore, shinyGames, typeGames, cachipunGames} from './store';
+	import {shinyScore, cachipunScore, typeScore, shinyGames, typeGames, cachipunGames, favoritePokemon} from './store';
 	import { get } from 'svelte/store';
+	import { onMount } from 'svelte';
 	
 	const shinyscore = get(shinyScore);
 	const typescore = get(typeScore);
@@ -10,6 +11,8 @@
 	const shinygames = get(shinyGames);
 	const typegames = get(typeGames);
 	const cachipungames = get(cachipunGames);
+
+	let favoritepokemon;
 
 	const shinyratio = CalculateRatio(shinyscore,shinygames);
 	const typeratio = CalculateRatio(typescore,typegames);
@@ -21,45 +24,53 @@
 		}
 		return (score.n/games.n).toFixed(2);
 	}
+
+	onMount(() => {favoritepokemon = get(favoritePokemon)})
 </script>
 
 <h1>PokeAPP</h1>
 <div class="app">
 	<main>
-		<div class="game">
-			<div>
-				<a href='/shiny'><button type='button'> Shiny </button></a>
+		<div class="flexgrid">
+			<div class="game">
+				<div class="game-button">
+					<a href='/shiny'><button type='button'> Shiny </button></a>
+				</div>
+				<div>
+					<h1>Shiny Score: {shinyscore.n}</h1>
+					<h1>Shiny Win Ratio: {shinyratio}</h1>
+				</div>
 			</div>
-			<div>
-				<h1>Shiny Score: {shinyscore.n}</h1>
-				<h1>Shiny Win Ratio: {shinyratio}</h1>
+			<div class="game">
+				<div class="game-button">
+					<a href='/type'><button type='button'> Type </button></a>
+				</div>
+				<div>
+					<h1>Type Score: {typescore.n}</h1>
+					<h1>Type Win Ratio: {typeratio}</h1>
+				</div>
 			</div>
-		</div>
-		<div class="game">
-			<div>
-				<a href='/type'><button type='button'> Type </button></a>
-			</div>
-			<div>
-				<h1>Type Score: {typescore.n}</h1>
-				<h1>Type Win Ratio: {typeratio}</h1>
-			</div>
-		</div>
-		<div class="game">
-			<div>
-				<a href='/cachipun'><button type='button' style="font-size: large;"> Cachipun </button></a>
-			</div>
-			<div>
-				<h1>Cachipun Score: {cachipunscore.n}</h1>
-				<h1>Cachipun Win Ratio: {cachipunratio}</h1>
+			<div class="game">
+				<div class="game-button">
+					<a href='/cachipun'><button type='button' style="font-size: large;"> Cachipun </button></a>
+				</div>
+				<div>
+					<h1>Cachipun Score: {cachipunscore.n}</h1>
+					<h1>Cachipun Win Ratio: {cachipunratio}</h1>
+				</div>
 			</div>
 		</div>
 		<div>
-			<a href='/favorite'><button type='button'> Favorite </button></a>
+			<a href='/favorite'><button type='button'  style="font-size: large;"> Favourite </button></a>
 		</div>
 	</main>
 
 	<footer>
 		<p>by grupo 8</p>
+
+		{#if favoritepokemon && favoritepokemon.url !== "" }
+			<img src={favoritepokemon.url} alt="spirite"/>
+		{/if}
 	</footer>
 </div>
 
@@ -75,7 +86,7 @@
 	.game{
 		display: inline-flex;
 		align-items: center;
-		align-self: center;
+		align-self: center
 	}
 
 	button{
@@ -114,5 +125,13 @@
 		footer {
 			padding: 12px 0;
 		}
+	}
+
+	.flexgrid {
+		display: grid;
+	}
+
+	.game-button {
+		margin-right: 16px;
 	}
 </style>
