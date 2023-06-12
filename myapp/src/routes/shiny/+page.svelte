@@ -9,7 +9,7 @@
 
 <h1>Guess The Shiny</h1>
 <div class="app">
-	<main>
+	<main style="align-items:center">
 		<a href='/shiny/play'><button type='button'> Play </button></a>
 		<a href='/shiny/about'><button type='button'> About </button></a>
 		<a href='/'><button type='button'> Home </button></a>

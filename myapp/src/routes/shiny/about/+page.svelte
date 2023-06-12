@@ -40,6 +40,16 @@
 		box-sizing: border-box;
 	}
 
+	button{
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+		padding: 0px;
+		text-align:center; 
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
 	footer {
 		display: flex;
 		flex-direction: column;

@@ -26,20 +26,32 @@
 <h1>PokeAPP</h1>
 <div class="app">
 	<main>
-		<div>
-			<a href='/shiny'><button type='button'> Shiny </button></a>
-			<h1>Shiny Score: {shinyscore.n}</h1>
-			<h1>Shiny Win Ratio: {shinyratio}</h1>
+		<div class="game">
+			<div>
+				<a href='/shiny'><button type='button'> Shiny </button></a>
+			</div>
+			<div>
+				<h1>Shiny Score: {shinyscore.n}</h1>
+				<h1>Shiny Win Ratio: {shinyratio}</h1>
+			</div>
 		</div>
-		<div>
-			<a href='/type'><button type='button'> Type </button></a>
-			<h1>Type Score: {typescore.n}</h1>
-			<h1>Shiny Win Ratio: {typeratio}</h1>
+		<div class="game">
+			<div>
+				<a href='/type'><button type='button'> Type </button></a>
+			</div>
+			<div>
+				<h1>Type Score: {typescore.n}</h1>
+				<h1>Type Win Ratio: {typeratio}</h1>
+			</div>
 		</div>
-		<div>
-			<a href='/cachipun'><button type='button'> Cachipun </button></a>
-			<h1>Cachipun Score: {cachipunscore.n}</h1>
-			<h1>Shiny Win Ratio: {cachipunratio}</h1>
+		<div class="game">
+			<div>
+				<a href='/cachipun'><button type='button' style="font-size: large;"> Cachipun </button></a>
+			</div>
+			<div>
+				<h1>Cachipun Score: {cachipunscore.n}</h1>
+				<h1>Cachipun Win Ratio: {cachipunratio}</h1>
+			</div>
 		</div>
 		<div>
 			<a href='/favorite'><button type='button'> Favorite </button></a>
@@ -57,10 +69,23 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		font-size: 100%;
 	}
 
 	.game{
 		display: inline-flex;
+		align-items: center;
+		align-self: center;
+	}
+
+	button{
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+		padding: 0px;
+		text-align:center; 
+		white-space: nowrap;
+		overflow: hidden;
 	}
 
 	main {
@@ -80,6 +105,8 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
+		min-height: 10%;
+		max-height: 30%;
 	}
 
 
