@@ -7,7 +7,3 @@
 > npm run dev -- --open
 ```
 
-## Referencias
-```
-> Rueda:
-```
